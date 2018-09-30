@@ -3,9 +3,11 @@
 		list-style: none;
 	}
 	@include min-screen($xs) {
-		.about-label { display: none; }
+		.about-label {
+			display: none;
+		}
 
-		h2 { 
+		h2 {
 			font-size: 28px;
 			margin: 5% 0 10%;
 		}
@@ -23,7 +25,7 @@
 	}
 
 	@include min-screen($md) {
-		h2 { 
+		h2 {
 			font-size: 2.25rem;
 			margin-bottom: 5%;
 		}
@@ -39,12 +41,11 @@
 			width: 70%;
 			padding: 0 0 5% 5%;
 		}
-
 	}
 
 	ul.achievements {
 		li {
-			font-family: 'Roboto', sans-serif;
+			font-family: "Roboto", sans-serif;
 			font-size: 13px;
 			font-weight: 200;
 			line-height: 20px;
@@ -57,7 +58,7 @@
 		}
 	}
 	p {
-		font-family: 'Roboto', sans-serif;
+		font-family: "Roboto", sans-serif;
 		font-size: 13px;
 		font-weight: 200;
 		line-height: 25px;
@@ -68,12 +69,15 @@
 		}
 	}
 
-	h2,h3 {
+	h2,
+	h3 {
 		font-family: "essonnes-display", serif;
 		margin-top: 5%;
 		font-weight: 400;
 		color: $darkgrey2;
 	}
 
-	h3 { font-size: 1.75rem; }
+	h3 {
+		font-size: 1.75rem;
+	}
 }

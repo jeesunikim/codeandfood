@@ -10,7 +10,8 @@
 		width: 90%;
 		margin: 0 auto;
 		height: 100%;
-		.copy-left, .copy-right{
+		.copy-left,
+		.copy-right {
 			@include min-screen($xs) {
 				float: none;
 				text-align: center;
@@ -19,24 +20,24 @@
 				margin-bottom: 7%;
 			}
 		}
-		.copy-left { 
+		.copy-left {
 			@include min-screen($md) {
-				float: left; 
+				float: left;
 				text-align: left;
 				top: 50%;
 				left: 5%;
 				transform: translateY(-50%);
 			}
 		}
-		.copy-right { 
+		.copy-right {
 			@include min-screen($md) {
-				float: right; 
+				float: right;
 				right: 5%;
 				top: 50%;
 				transform: translateY(-50%);
 			}
 		}
-		a { 
+		a {
 			color: $darkgrey2;
 			display: inline-block;
 			line-height: 20px;

@@ -8,7 +8,7 @@ title: Code && Food
   <li class="post {{post.categories}}">
 		
     <a href="{{ post.url }}">
-      <span class="post-image" style="background-image: url('{{ post.image }}'); background-position-y:50%;"></span>
+      <span class="post-image centered" style="background-image: url('{{ post.image }}');"></span>
     </a>
     {% if post.categories contains 'food' %}
     <div class="post-desc">

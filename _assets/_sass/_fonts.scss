@@ -1,8 +1,15 @@
-h2, p, span, .footer {
-	font-family: 'Roboto', sans-serif;
+h2,
+p,
+span,
+.footer {
+	font-family: "Roboto", sans-serif;
 }
 
-.footer, nav.site-nav a { font-size: .75rem; color: #fff;}
+.footer,
+nav.site-nav a {
+	font-size: 0.75rem;
+	color: #fff;
+}
 
 a {
 	text-decoration: none;
@@ -14,7 +21,9 @@ a.image-url {
 	border-bottom: none;
 }
 
-span, p, h2 {
+span,
+p,
+h2 {
 	&.korean {
 		font-family: "source-han-sans-korean", sans-serif;
 	}
@@ -24,9 +33,10 @@ h2.korean {
 	display: inline-block;
 }
 
-
-span, p, ul {
-	font-family: 'Roboto', sans-serif;
+span,
+p,
+ul {
+	font-family: "Roboto", sans-serif;
 	font-size: 13px;
 	font-weight: 200;
 	line-height: 25px;

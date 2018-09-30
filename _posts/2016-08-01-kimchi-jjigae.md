@@ -2,9 +2,9 @@
 layout: post
 title:  "Kimchi Jjigae"
 date:   2016-08-01 19:18:20 -0400
-category: food
 desc: Kimchi Jjigae is a stew-like Korean dish. In this recipe, we are using pork and kimchi juice to make delicious broth.
-image: "https://storage.googleapis.com/codeandfood/food/kimchi-jjigae/kimchi-jjigae-default.jpg"
+image: https://storage.googleapis.com/codeandfood/food/kimchi-jjigae/kimchi-jjigae-default.jpg
+category: [food]
 ---
 <div class="project-description">
 	<h2>Kimchi Jjigae</h2>

@@ -1,4 +1,5 @@
-.page-content, article.post {
+.page-content,
+article.post {
 	margin: 0 5% 5%;
 	overflow: auto;
 	position: relative;
@@ -22,11 +23,15 @@
 		@include min-screen($md) {
 			margin-top: 240px;
 		}
-		p { margin: 20px 0; }
+		p {
+			margin: 20px 0;
+		}
 	}
 }
 
-a { color: #000; }
+a {
+	color: #000;
+}
 
 ul.posts {
 	position: relative;
@@ -38,31 +43,33 @@ ul.posts {
 		float: left;
 		opacity: 1;
 		background-color: rgb(254, 239, 234);
-		p { 
-			font-size: 11px; 
-			// margin-top: 6%;
+		p {
+			font-size: 11px;
 		}
-		&:nth-child(n){
+		&:nth-child(n) {
 			background-color: rgb(254, 239, 234);
-			a, p {
+			a,
+			p {
 				color: rgb(71, 73, 70);
 			}
 		}
 
-		&:nth-child(2n){
+		&:nth-child(2n) {
 			background-color: $grey6;
-			a, p {
+			a,
+			p {
 				color: #000;
 			}
 		}
-		
-		&:nth-child(3n){
+
+		&:nth-child(3n) {
 			background-color: rgb(244, 244, 246);
-			a, p {
+			a,
+			p {
 				color: #000;
 			}
 		}
-		
+
 		&.food {
 			padding: 0;
 			overflow: hidden;
@@ -72,15 +79,20 @@ ul.posts {
 			}
 			.post-desc {
 				background-color: $darkgrey2;
-				p,a {color: #fff;}
-				a {border-bottom: 1px dotted #fff;}
+				p,
+				a {
+					color: #fff;
+				}
+				a {
+					border-bottom: 1px dotted #fff;
+				}
 			}
 		}
 		@include min-screen($xs) {
 			width: 100%;
 		}
 		@include min-screen($md) {
-			width: 47%
+			width: 47%;
 		}
 		@include min-screen($lg) {
 			width: 30%;

@@ -1,5 +1,5 @@
 // Credit to Daniel Eden https://daneden.me
-var gulp = require('gulp'),
+const gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	postcss = require('gulp-postcss'),
 	cssnext = require('postcss-cssnext'),
