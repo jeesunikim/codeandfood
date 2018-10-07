@@ -26,8 +26,6 @@ categories: [code, work]
 	</div>
 </div>
 
-
-
 <div class="project-image">
 	<img src="https://storage.googleapis.com/codeandfood/work/samsung/samsung-upgrade-program/samsung-upgrade-program.png" alt="Samsung Upgrade Program Default Image" />
 </div>
