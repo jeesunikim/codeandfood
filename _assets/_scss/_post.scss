@@ -2,15 +2,22 @@
 .food-image {
 	margin: 0 auto;
 	text-align: center;
-	width: 90%;
+	width: 95%;
 	border: 1px solid $darkgrey4;
 	padding: 4%;
 	overflow: auto;
 	background-color: #fff;
 
+	display: flex;
+	flex-direction: column;
+
 	img,
 	iframe {
 		border: 1px solid $darkgrey4;
+	}
+
+	@include min-screen($md) {
+		flex-direction: row;
 	}
 
 	&.inline {
@@ -31,8 +38,21 @@
 			}
 		}
 	}
+
 	p {
 		margin-bottom: 0;
+	}
+
+	&--4 {
+		img {
+			width: 100%;
+			border: none;
+
+			@include min-screen($md) {
+				width: 25%;
+				height: 100%;
+			}
+		}	
 	}
 }
 

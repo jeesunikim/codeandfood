@@ -1,4 +1,6 @@
 // Colors
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 $grey: rgb(199, 199, 199);
 $lightgrey: rgb(241, 241, 241);
 $grey2: rgb(245, 245, 245);
@@ -16,3 +18,8 @@ $xs: 320px;
 $sm: 480px;
 $md: 768px;
 $lg: 1024px;
+
+
+// Z INDEX
+$zindex-mask: 5;
+$zindex-nav: 10;

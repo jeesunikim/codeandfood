@@ -6,7 +6,7 @@ title: code
 {% for post in site.posts %}
 	{% if post.hidden != true %}
 	  {% if post.categories contains 'code' %}
-	  <li class="post {{post.categories}}">
+	  <li class="post {{post.categories}}" data-title="{{post.title}}" data-url="{{post.url}}">
 	    <a href="{{ post.url }}">
 	      <span class="post-image" style="background-image: url('{{ post.image }}')"></span>
 	    </a>

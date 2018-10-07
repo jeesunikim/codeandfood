@@ -5,7 +5,7 @@ title: work
 <ul class="posts">
 {% for post in site.posts %}
   	{% if post.categories contains 'work' %}
-  <li class="post {{post.categories}}">
+  <li class="post {{post.categories}}" data-title="{{post.title}}" data-url="{{post.url}}">
   	<a href="{{ post.url }}">
       <span class="post-image" style="background-image: url('{{ post.image }}')"></span>
     </a>

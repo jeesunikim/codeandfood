@@ -2,7 +2,6 @@
   "name": "codeandfood.com",
   "version": "1.0.0",
   "description": "Blog site for myself (http://www.github.com/jeesunikim)",
-  "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeesunikim/codeandfood.com.git"
@@ -17,30 +16,31 @@
   "bugs": {
     "url": "https://github.com/jeesunikim/codeandfood.com/issues"
   },
+  "scripts": {
+    "start": "webpack-dev-server --open webpack.config.js --mode development",
+    "watch": "webpack --watch --config webpack.config.js"
+  },
+  "browserslist": "> 0.25%, not dead",
   "homepage": "https://github.com/jeesunikim/codeandfood.com#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "@babel/runtime": "^7.1.2",
+    "axios": "^0.18.0",
+    "gsap": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "autoprefixer": "^6.3.6",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.9.0",
-    "browser-sync": "^2.12.8",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.3",
-    "gulp-concat-util": "^0.5.5",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-postcss": "^6.1.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-shell": "^0.5.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.4",
-    "node-bourbon": "^4.2.8",
-    "node-neat": "^1.7.2",
-    "postcss-cssnext": "^2.5.2",
-    "postcss-import": "^8.1.2",
-    "postcss-reporter": "^1.3.3",
-    "stylelint": "^6.6.0"
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "stylelint": "^6.6.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.3"
   }
 }

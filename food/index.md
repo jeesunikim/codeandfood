@@ -6,7 +6,7 @@ title: food
 	{% for post in site.posts %}
 	{% if post.hidden != true %}
 	{% if post.category contains 'food' %}
-	<li class="post {{post.category}}">
+	<li class="post {{post.category}}" data-title="{{post.title}}" data-url="{{post.url}}">
 		<a href="{{ post.url }}">
 			<span class="post-image centered" style="background-image: url('{{ post.image }}')"></span>
 		</a>
