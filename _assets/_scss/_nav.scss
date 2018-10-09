@@ -5,7 +5,6 @@ header.site-header {
 	h1 {
 		display: none;
 	}
-	padding: 0;
 	@include min-screen($xs) {
 		line-height: 130px;
 	}
@@ -17,7 +16,6 @@ header.site-header {
 	padding: 0;
 	position: fixed;
 	z-index: $zindex-nav;
-	border-bottom: 1px solid #000;
 
 	nav {
 		transition: opacity 0.2s ease-out;
@@ -49,6 +47,16 @@ header.site-header {
 }
 
 nav.nav-list {
+	&:after{
+		content: "";
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background: #000;
+		left: 0;
+		bottom: 0;
+	}
+
 	.box {
 		width: 146px;
 		height: 170px;
@@ -83,10 +91,11 @@ nav.nav-list {
 		}
 	}
 	a {
-		font-family: "Roboto", sans-serif;
+		font-family: "Exo", sans-serif;
+		font-weight: 600;
+		font-size: 0.8rem;
 		color: $darkgrey2;
 		text-transform: uppercase;
-		font-size: 0.75rem;
 		letter-spacing: 0.08em;
 		display: inline-block;
 		vertical-align: middle;
@@ -169,33 +178,31 @@ nav.nav-list {
 
 .mobile-nav {
 	@include min-screen($xs) {
-		position: absolute;
+		position: relative;
+		display: flex;
 		opacity: 1;
-		width: 100%;
+		width: 85%;
+		margin: 0 auto;
+		padding: 10px 0;
+		justify-content: space-between;
 	}
 	@include min-screen($md) {
 		display: none;
 	}
-	.inner {
-		position: absolute;
+	.hamburger-menu {
 		width: 23px;
-		height: 21px;
-		right: 41px;
-		top: 50%;
-		margin-top: -4px;
+		height: 17px;
+		align-self: center;
 		cursor: pointer;
-		@include min-screen(400px) {
-			right: 71px;
-		}
 	}
 	span.oneline-box {
 		width: 146px;
 		border: 1px solid $darkgrey2;
 		height: 30px !important;
-		left: 40px;
-		margin: 5px 0 0 0;
+		margin: 0;
 		display: inline-block;
 		vertical-align: middle;
+
 		a.title {
 			@include min-screen($xs) {
 				font-family: futura, "futura-pt", sans-serif;
@@ -253,7 +260,7 @@ nav.nav-list {
 	margin: 0;
 	top: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: $zindex-nav;
 	text-align: center;
 
 	nav.nav-list {
@@ -374,53 +381,63 @@ header.site-header {
 // Hovered Menu in Body Tag
 .hovered-menu {
 	display: none;
+	opacity: 0;
+
 	a {
-		opacity: 0;
+		// opacity: 0;
 		border-bottom: none;
 	}
 }
 
-body.hovered {
-	.hovered-menu {
-		display: block;
-		padding: 40% 30%;
-		width: 100%;
-		opacity: 1;
-		height: 100%;
-		position: fixed;
-		background-color: #fff;
-		z-index: 10;
-		a {
-			transition: opacity 0.8s ease-out;
-			-moz-transition: opacity 0.8s ease-out;
-			-o-transition: opacity 0.8s ease-out;
-			-webkit-transition: opacity 0.8s ease-out;
+body {
+	// .hovered-menu {
+	// 	opacity: 0;
+	// }
+
+	&.hovered {
+		.hovered-menu {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			width: 100%;
 			opacity: 1;
-			font-family: "Roboto", sans-serif;
-			color: $darkgrey2;
-			text-transform: uppercase;
-			font-size: 2rem;
-			letter-spacing: 0.08em;
-			display: block;
-			text-align: center;
-			margin-bottom: 30px;
-			&:first-child {
-				margin-top: 30px;
+			height: 100%;
+			position: fixed;
+			background-color: #fff;
+			z-index: $zindex-nav;
+			// transition: opacity 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+			// -moz-transition: opacity 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+			// -o-transition: opacity 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+			// -webkit-transition: opacity 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+			a {
+				// opacity: 1;
+				font-family: "Roboto", sans-serif;
+				color: $darkgrey2;
+				text-transform: uppercase;
+				font-size: 2rem;
+				letter-spacing: 0.08em;
+				display: block;
+				text-align: center;
+				margin-bottom: 30px;
+				&:first-child {
+					margin-top: 30px;
+				}
 			}
 		}
-	}
-	span.hamburger {
-		&.top {
-			transform: rotate(-45deg);
-			top: 7px;
-		}
-		&.middle {
-			// top: 7px;
-			opacity: 0;
-		}
-		&.bottom {
-			top: 7px;
-			transform: rotate(45deg);
+		span.hamburger {
+			&.top {
+				transform: rotate(-45deg);
+				top: 7px;
+			}
+			&.middle {
+				opacity: 0;
+			}
+			&.bottom {
+				top: 7px;
+				transform: rotate(45deg);
+			}
 		}
 	}
 }

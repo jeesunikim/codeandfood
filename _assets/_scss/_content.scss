@@ -7,7 +7,7 @@ article.post {
 
 .wrapper {
 	@include min-screen($xs) {
-		margin-top: 130px;
+		margin-top: 60px;
 	}
 	@include min-screen($md) {
 		max-width: 1440px;
@@ -19,7 +19,7 @@ article.post {
 
 	&.single-page {
 		@include min-screen($xs) {
-			margin-top: 130px;
+			margin-top: 60px;
 		}
 		padding: 5% 5% 0;
 		margin: 240px auto 1.5%;
@@ -30,6 +30,10 @@ article.post {
 		p {
 			margin: 20px 0;
 		}
+	}
+
+	.is--centered {
+		text-align: center;
 	}
 }
 
@@ -48,31 +52,11 @@ ul.posts {
 		margin: 2.5% 1.5% 1.5%;
 		height: 460px;
 		background-color: rgb(254, 239, 234);
+		max-width: 340px;
+
 		p {
-			font-size: 11px;
-		}
-		&:nth-child(n) {
-			background-color: rgb(254, 239, 234);
-			a,
-			p {
-				color: rgb(71, 73, 70);
-			}
-		}
-
-		&:nth-child(2n) {
-			background-color: $grey6;
-			a,
-			p {
-				color: #000;
-			}
-		}
-
-		&:nth-child(3n) {
-			background-color: rgb(244, 244, 246);
-			a,
-			p {
-				color: #000;
-			}
+			font-size: 12px;
+			line-height: 1.75;
 		}
 
 		&.food {
@@ -88,20 +72,24 @@ ul.posts {
 				a {
 					color: #fff;
 				}
-				a {
-					border-bottom: 1px dotted #fff;
-				}
 			}
 		}
 		@include min-screen($xs) {
 			width: 100%;
+
+			&:first-child {
+				margin-top: 0;
+			}
 		}
 		@include min-screen($md) {
 			width: 47%;
+
+			&:first-child {
+				margin-top: 2.5%;
+			}
 		}
 		@include min-screen($lg) {
 			width: 1 1 300px;
-			max-width: 320px;
 			transform: translateY(20px);
 			opacity: 0;
 			box-shadow: 0px 2px 7px #bdbdbd;
@@ -116,7 +104,7 @@ ul.posts {
 
 			&:hover {
 				box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-					0 5px 10px rgba(0, 0, 0, 0.22);
+				0 5px 10px rgba(0, 0, 0, 0.22);
 			}
 		}
 	}

@@ -1,4 +1,7 @@
-const MAX_SCROLL_TOP = 187;
+const MAX_SCROLL_TOP_DESKTOP = 187;
+const MAX_SCROLL_TOP_MOBILE = 60;
+const MOBILE_WIDTH = 768;
+const CSS_IS_HOVERED = "hovered";
 
 export default class StickyNav {
 	constructor() {
@@ -7,33 +10,67 @@ export default class StickyNav {
 		this.box = this.header.querySelector(".box");
 		this.boxTitle = this.box.querySelectorAll(".title");
 
+		this.mobileScrolledNavMenu = document.querySelector(".hamburger-menu.is--scrolled");
+		this.mobile = this.header.querySelector(".mobile-nav");
+		this.mobileMenu = this.mobile.querySelector(".hamburger-menu");
+
 		this.defaultNavHeight = this.header.clientHeight;
 		this.defaultBoxHeight = this.box.clientHeight;
 		this.defaultBoxTitleHeight = this.boxTitle[0].clientHeight;
-		
-		this.mobile = this.header.querySelector(".inner");
 
+		this.isDesktop = window.innerWidth > MOBILE_WIDTH;
+		
 		this.onScroll = this.onScroll.bind(this);
+		this.onResize = this.onResize.bind(this);
+		this.displayMobileNav = this.displayMobileNav.bind(this);
 
 		window.addEventListener("scroll", this.onScroll);
+		window.addEventListener("resize", this.onResize);
+
+		this.mobileMenu.addEventListener("click", this.displayMobileNav);
+		this.mobileScrolledNavMenu.addEventListener("click", this.displayMobileNav);
+
+		this.init();
+	}
+
+	init() {	
+		this.onScroll();
+	}
+
+	onResize() {
+		this.isDesktop = window.innerWidth > MOBILE_WIDTH;
+	}
+
+	displayMobileNav() {
+		const body = document.querySelector("body");
+
+		if(body.classList.contains(CSS_IS_HOVERED)) {
+			body.classList.remove(CSS_IS_HOVERED);
+		}else{
+			body.classList.add(CSS_IS_HOVERED);
+		}
 	}
 
 	onScroll() {
 		let scrollTop = window.pageYOffset || document.documentElement.scrollTop,
-			newNavHeight, newBoxHeight, newBoxTitleHeight;
+			newNavHeight, newBoxHeight, newBoxTitleHeight, currentMaxScroll;
 
+		currentMaxScroll = this.isDesktop ? MAX_SCROLL_TOP_DESKTOP : MAX_SCROLL_TOP_MOBILE;
 		newNavHeight = this.defaultNavHeight - scrollTop;
-		newBoxHeight = this.defaultBoxHeight - scrollTop;
-		newBoxTitleHeight = this.defaultBoxTitleHeight - scrollTop / 3;
+		newBoxTitleHeight = this.isDesktop ? this.defaultBoxTitleHeight - scrollTop / 3 : this.mobile.clientHeight;
+		
 
-		this.boxTitle.forEach(boxEl => {
-			boxEl.style.lineHeight = newBoxTitleHeight + "px";
-		})
+		if(this.isDesktop) {
+			newBoxHeight = this.defaultBoxHeight - scrollTop;
+			this.box.style.height = newBoxHeight + "px";
+			this.boxTitle.forEach(boxEl => {
+				boxEl.style.lineHeight = newBoxTitleHeight + "px";
+			});
+		}
 
 		this.header.style.lineHeight = newNavHeight + "px";
-		this.box.style.height = newBoxHeight + "px";
 
-		if(scrollTop > MAX_SCROLL_TOP) {
+		if(scrollTop > currentMaxScroll) {
 			this.setSticky();
 		} else {
 			this.removeSticky();
@@ -50,17 +87,3 @@ export default class StickyNav {
 		this.header.classList.remove("is--fixed");
 	}
 }
-
-// 	$(function() {
-// 		var nav = new fixedNav();
-// 		nav.init();
-
-// 		navSelf.mobile.on("click", function() {
-// 			if ($("body").hasClass("hovered")) {
-// 				$("body").removeClass("hovered");
-// 			} else {
-// 				$("body").addClass("hovered");
-// 			}
-// 		});
-// 	});
-// })(window, document, jQuery);

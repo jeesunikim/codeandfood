@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Barbarian Seating Chart"
-date:   2016-02-26 19:18:20
+date:   2016-02-26
 image: https://storage.googleapis.com/codeandfood/work/tbg/superdesk-thumbnail.png
 desc: A seating chart for the Barbarian Group's Superdesk. Built on MEAN stack.
 categories: [code, work]
@@ -11,7 +11,8 @@ categories: [code, work]
 	<h2>Barbarian Seating Chart</h2>
 	<div class="desc">
 		<span><strong>Date:</strong> February 2016</span>
-		<span><strong>Type:</strong> Personal Project</span>
+		<span><strong>Type:</strong> Side Project</span>
+		<span><strong>Role/Team:</strong> Lead Developer</span>
 		<span><strong>Code Source:</strong> <a href="https://github.com/jeesunikim/superdesk" target="_blank">Github</a></span>
 	</div>
 	<div class="desc">
@@ -20,7 +21,6 @@ categories: [code, work]
 			<li>MongoDB</li>
 			<li>Express</li>
 			<li>AngularJS</li>
-			<li>Node</li>
 			<li>Gulp</li>
 		</ul>
 	</div>

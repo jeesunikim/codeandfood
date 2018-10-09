@@ -1,45 +1,45 @@
 ---
 layout: post
-title:  "Lay’s Do Us a Flavor Campaign"
-date:   2018-09-24 19:18:20
+title:  "Lay's Do Us a Flavor Campaign"
+date:   2017-01-05
 image: https://storage.googleapis.com/codeandfood/work/lays/lays_thumbnail.jpg
-desc: RBG for Good is a mobile WebAR experience that lets you keep RBG fit, rested, and on top of her game so she can keep going for years to come.
+desc: A digital experience for "America's Next Great Potato Chip Flavor".
 categories: [code, work]
 ---
 
 <div class="project-description">
-	<h2>RBG for Good</h2>
+	<h2>Lay's Do Us a Flavor Campaign</h2>
 	<div class="desc">
-		<span><strong>Date:</strong> September 2018</span>
-		<span><strong>Client:</strong> Rock the Vote</span>
-		<span><strong><a href="https://rbgforgood.com/" target="_blank">Currently Live</a></strong></span>
+		<span><strong>Date:</strong> January 2017</span>
+		<span><strong>Client:</strong> Lay's</span>
+		<span><strong>Role/Team:</strong> Developer</span>
+		<span><strong>Type:</strong> <a href="https://work.firstborn.com/work/318/lays" target="_blank">Archived Project</a></span>
 	</div>
 	<div class="desc">
 		<span><strong>Tools Used:</strong></span>
 		<ul>
-			<li>JavaScript</li>
-			<li>GSAP</li>
-			<li>SVG Animation</li>
-			<li>SCSS</li>
+			<li>JavaScript &ndash; Vanilla</li>
+			<li>React</li>
+			<li>Blade Template</li>
+			<li>SCSS/CSS</li>
+			<li>SVG</li>
 		</ul>
 	</div>
 </div>
 
 <div class="project-image">
+	<img class="is--no-border" src="https://storage.googleapis.com/codeandfood/work/lays/lays.png" alt="Lays Hero" />
+</div>
+
+<p>For Lay's "Do Us a Flavor" promotion in 2017, Firstborn created a seamless digital experience that makes it easy and fun for consumers to create and design their own flavor and packaging. Our app also allowed them to share and vote their favorite flavor on social media platforms.</p>
+
+<p>This promotion has helped the brand come up with new flavor ideas since 2013. Due to its popularity, our site had 5 million API requests in 2 months since the launch.</p>
+
+<div class="project-image">
+	<img class="margin-b" src="https://storage.googleapis.com/codeandfood/work/lays/lays_02.jpg" alt="Lays Home" />
 	<img src="https://storage.googleapis.com/codeandfood/work/lays/lays.jpg" alt="Lays Choose Ingredients" />
 </div>
 
-<p>RBG for Good is a mobile WebAR experience that lets you have Justice Ruth Bader Ginsburg. Samsung Upgrade Program is a static landing page that is written in HTML and SCSS. It has bootstrap's <a href="http://v4-alpha.getbootstrap.com/components/collapse/" target="_blank">Collapse</a> component for the FAQs module. It wasn't difficult to build. The difficulty was introduced when the client asked us to remove tagging in the expanded state.</p> 
+<p>With a Laravel PHP back-end, the static front-end part used Blade templates with JavaScript and CSS to create a fully responsive and completely component based experience while "Creating Your Own Flavor &amp; Packaging" steps used React and Redux.</p>
 
-<p>This is a simple task - but I kept getting a conflict when I edited bootstrap's code. I thought of removing the bootstrap javascript and start building my own collapse javascript function from scratch. Given the deadline, I kept the bootstrap and tested each function in Bootstrap's collapse component until I ended up with a result the client was happy with.</p>
-
-
-<div class="project-image">
-	<img src="https://storage.googleapis.com/codeandfood/work/samsung/samsung-upgrade-program/faq.gif" alt="Samsung Upgrade Program FAQ" />
-</div>
-
-<div>
-	<p>Press: https://adage.com/creativity/work/firstborn-rbg-good/949431</p>
-</div>
-
-<p>I used to think that Bootstrap was a hindrance to learning because it makes everything so easy. But going through its code line by line, I appreciated its structure and learned how to use OOP better.</p>
+<p>My role as a front-end developer was building reusable components, SVG animations, creating main features on the homepage and QA the site in all browsers and devices. This was the first project that I built from scratch at Firstborn. I had mostly used jQuery in the past, so writing everything in Vanilla JS was challenging. Fortunately, I'm very happy to say that I no longer use jQuery :).</p>

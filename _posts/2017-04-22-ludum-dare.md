@@ -2,44 +2,44 @@
 layout: post
 title:  "Ludum Dare 38"
 date:   2017-04-22 19:18:20
-image: https://storage.googleapis.com/codeandfood/work/ludum_dare_thumbnail.jpg
-desc: RBG for Good is a mobile WebAR experience that lets you keep RBG fit, rested, and on top of her game so she can keep going for years to come.
+image: https://storage.googleapis.com/codeandfood/work/ludumdare/ludum_dare_thumbnail.jpg
+desc: 10 Firstborners (designers, 3D technical artists, strategist, developers, and producer) created a game within 72 hours.
 categories: [code, work]
 ---
 
 <div class="project-description">
-	<h2>RBG for Good</h2>
+	<h2>Ludum Dare 38 &ndash; Supermarket Sweep Game Jam</h2>
 	<div class="desc">
-		<span><strong>Date:</strong> September 2018</span>
-		<span><strong>Client:</strong> Rock the Vote</span>
-		<span><strong><a href="https://rbgforgood.com/" target="_blank">Currently Live</a></strong></span>
+		<span><strong>Date:</strong> April 2017</span>
+		<span><strong>Type:</strong> Side Project</span>
+		<span><strong>Role/Team:</strong> Developer</span>
+		<span><strong><a href="http://ludum-dare-38.fborn.com/" target="_blank">PLAY THE GAME HERE</a></strong></span>
 	</div>
 	<div class="desc">
-		<span><strong>Tools Used:</strong></span>
+		<span><strong>Tool(s) Used:</strong></span>
 		<ul>
-			<li>JavaScript</li>
-			<li>GSAP</li>
-			<li>SVG Animation</li>
-			<li>SCSS</li>
+			<li>JavaScript &ndash; Vanilla, ES6</li>
+			<li>
+				<a href="https://phaser.io/" target="_blank">Phaser</a>
+			</li>
 		</ul>
 	</div>
 </div>
 
-<div class="project-image">
-	<img src="https://storage.googleapis.com/codeandfood/work/ludum_dare.jpg" alt="Ludum Dare 38" />
+<div class="project-image color--dark">
+	<img src="https://storage.googleapis.com/codeandfood/work/ludumdare/ludum_dare.jpg" alt="Ludum Dare 38" />
 </div>
 
-<p>RBG for Good is a mobile WebAR experience that lets you have Justice Ruth Bader Ginsburg. Samsung Upgrade Program is a static landing page that is written in HTML and SCSS. It has bootstrap's <a href="http://v4-alpha.getbootstrap.com/components/collapse/" target="_blank">Collapse</a> component for the FAQs module. It wasn't difficult to build. The difficulty was introduced when the client asked us to remove tagging in the expanded state.</p> 
+<p>On the weekend of April 21st, 10 Firstborners (designers, 3D technical artists, strategist, developers, and producer) created a game for the 38th Ludum Dare event, "one of the world's largest and longest running Game Jam events." We created everything from scratch within 72 hours &ndash; ideation, art, animations, dialog, sound, and code. It is called Supermarket Sneak. You can find more details <a href="https://ldjam.com/events/ludum-dare/38/$16802" target="_blank">here</a>.</p>
 
-<p>This is a simple task - but I kept getting a conflict when I edited bootstrap's code. I thought of removing the bootstrap javascript and start building my own collapse javascript function from scratch. Given the deadline, I kept the bootstrap and tested each function in Bootstrap's collapse component until I ended up with a result the client was happy with.</p>
-
-
-<div class="project-image">
-	<img src="https://storage.googleapis.com/codeandfood/work/samsung/samsung-upgrade-program/faq.gif" alt="Samsung Upgrade Program FAQ" />
+<div class="project-image color--dark">
+	<img src="https://storage.googleapis.com/codeandfood/work/ludumdare/ludum_dare_03.jpg" alt="Ludum Dare 38 Menu" />
 </div>
 
-<div>
-	<p>Press: https://adage.com/creativity/work/firstborn-rbg-good/949431</p>
+<p>The theme for Ludum Dare 38 was <strong>"A Small World"</strong>. Our strategist came up with the idea of a survival game where a player has to traverse the aisles of Smalltown Grocery, "avoiding the talkative townies, and grabbing each item on Mom’s shopping list before your phone runs out of battery-life." It was a fun project because we did everything together from scratch.</p>
+
+<div class="project-image color--dark">
+	<img src="https://storage.googleapis.com/codeandfood/work/ludumdare/ludum_dare_02.jpg" alt="Ludum Dare 38 Dialog" />
 </div>
 
-<p>I used to think that Bootstrap was a hindrance to learning because it makes everything so easy. But going through its code line by line, I appreciated its structure and learned how to use OOP better.</p>
+<p>From using sprites to create moving characters to creating collision in Phaser, it was pretty mind-blowing to see how much efforts it takes to create a game! Many thanks to the colleagues who asked me to work on this project together. It was so fun!</p>
