@@ -25,4 +25,8 @@ package-lock.json
 .jekyll-metadata
 
 # Ignore npm stuff
-node_modules/
+node_modules
+
+# Ignore nextjs wordpress blog boilerplate related files
+.env.local
+.next
