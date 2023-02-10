@@ -30,3 +30,4 @@ node_modules
 # Ignore nextjs wordpress blog boilerplate related files
 .env.local
 .next
+.topics
