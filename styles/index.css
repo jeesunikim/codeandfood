@@ -48,7 +48,7 @@
 }
 .wp-block-image.alignfull img,
 .wp-block-image.alignwide img {
-  @apply w-full;
+  @apply w-4/5;
 }
 .wp-block-image .alignleft,
 .wp-block-image .alignright,
@@ -101,4 +101,16 @@
 
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
+}
+
+.wp-block-columns {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.wp-block-embed-vimeo {
+  display: flex;
+  justify-content:center;
 }

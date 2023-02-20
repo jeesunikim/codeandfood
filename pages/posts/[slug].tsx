@@ -4,8 +4,7 @@ import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
-import MoreStories from "../../components/more-stories";
-import Header from "../../components/header";
+import RelatedStories from "../../components/relatedStories";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
@@ -24,7 +23,6 @@ export default function Post({ post, posts, preview }) {
 
   return (
     <Layout preview={preview}>
-      <Header />
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -33,7 +31,7 @@ export default function Post({ post, posts, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
+                  {post.title} | {CMS_NAME}
                 </title>
                 <meta
                   property="og:image"
@@ -54,7 +52,7 @@ export default function Post({ post, posts, preview }) {
             </article>
 
             <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            {morePosts.length > 0 && <RelatedStories posts={morePosts} />}
           </>
         )}
       </Container>

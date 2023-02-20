@@ -1,8 +1,8 @@
-import Avatar from './avatar'
-import Date from './date'
-import CoverImage from './cover-image'
-import PostTitle from './post-title'
-import Categories from './categories'
+import Avatar from "./avatar";
+import Date from "./Date";
+import CoverImage from "./cover-image";
+import PostTitle from "./post-title";
+import Categories from "./categories";
 
 export default function PostHeader({
   title,
@@ -14,21 +14,22 @@ export default function PostHeader({
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar author={author} />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} coverImage={coverImage} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar author={author} />
+      <div className="grid grid-rows-2 text-base justify-items-center mb-4">
+        <div>
+          <Date dateString={date} />
         </div>
-        <div className="mb-6 text-lg">
-          Posted <Date dateString={date} />
+        <div>
           <Categories categories={categories} />
+          <span className="ml-1">
+            <Avatar author={author} />
+          </span>
+        </div>
+      </div>
+      <div className="max-w-3xl mx-auto">
+        <div className="sm:px-1 px-4 mb-8">
+          <CoverImage title={title} coverImage={coverImage} />
         </div>
       </div>
     </>
-  )
+  );
 }
