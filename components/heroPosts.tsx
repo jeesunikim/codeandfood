@@ -19,7 +19,7 @@ export default function HeroPosts({ heroPosts }) {
           </div>
           <div className="grid grid-rows-2">
             <div>
-              <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
+              <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
                 <Link
                   href={`/posts/${node.slug}`}
                   className="hover:underline"
