@@ -5,10 +5,10 @@ export default function Header() {
     <nav className="grid grid-cols-3 max-w-screen-xl mx-auto py-10 px-2">
       <ul className="flex place-items-center">
         <li className="flex-auto text-center">
-          <a href="#">About</a>
+          <a href="#">about</a>
         </li>
         <li className="flex-auto text-center">
-          <a href="#">Code</a>
+          <a href="#">code</a>
         </li>
       </ul>
 
@@ -23,13 +23,7 @@ export default function Header() {
 
       <ul className="flex place-items-center">
         <li className="flex-auto text-center">
-          <a href="#">Books</a>
-        </li>
-        <li className="flex-auto text-center">
-          <a href="#">Journaling</a>
-        </li>
-        <li className="flex-auto text-center">
-          <a href="#">Lifestyle</a>
+          <a href="#">journaling</a>
         </li>
       </ul>
     </nav>

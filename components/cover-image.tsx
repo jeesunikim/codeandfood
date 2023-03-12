@@ -28,7 +28,7 @@ export default function CoverImage({
     />
   );
   return (
-    <div className="sm:mx-auto md:w-full md:m-0 md:max-w-3xl">
+    <div className="sm:mx-auto md:w-full md:m-0 md:max-w-4xl">
       {slug ? (
         <Link href={`/posts/${slug}`} aria-label={title}>
           {image}

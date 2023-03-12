@@ -16,6 +16,7 @@ import { CMS_NAME } from "../../lib/constants";
 export default function Post({ post, posts, preview }) {
   const router = useRouter();
   const morePosts = posts?.edges;
+  const isCodeCategory = post?.categories.edges[0].node.name === "Code";
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -23,7 +24,7 @@ export default function Post({ post, posts, preview }) {
 
   return (
     <Layout preview={preview}>
-      <Container>
+      <Container isCodeCategory={isCodeCategory}>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -44,11 +45,12 @@ export default function Post({ post, posts, preview }) {
                 date={post.date}
                 author={post.author}
                 categories={post.categories}
+                tags={post.tags}
               />
-              <PostBody content={post.content} />
-              <footer>
-                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-              </footer>
+              <PostBody
+                isCodeCategory={isCodeCategory}
+                content={post.content}
+              />
             </article>
 
             <SectionSeparator />
