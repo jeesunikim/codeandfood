@@ -17,6 +17,7 @@ export default function Post({ post, posts, preview }) {
   const router = useRouter();
   const morePosts = posts?.edges;
   const isCodeCategory = post?.categories.edges[0].node.name === "Code";
+  const title = `${post.title} | ${CMS_NAME}`;
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -31,9 +32,7 @@ export default function Post({ post, posts, preview }) {
           <>
             <article>
               <Head>
-                <title>
-                  {post.title} | {CMS_NAME}
-                </title>
+                <title>{title}</title>
                 <meta
                   property="og:image"
                   content={post.featuredImage?.node.sourceUrl}
